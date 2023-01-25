@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>My Webpage</title>
+    <style>
+      #main-section {
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      .alternate-content {
+        background-color: lightgray;
+        padding: 20px;
+        text-align: center;
+      }
+      .red-heading {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="red-heading">Welcome to my webpage</h1>
+    <div id="main-section">
+      <p>This is the initial content of the main section.</p>
+    </div>
+    <button id="change-content-button">Change Content</button>
+    <script>
+      var mainSection = document.getElementById("main-section");
+      var changeContentButton = document.getElementById("change-content-button");
+      changeContentButton.onclick = function() {
+        mainSection.innerHTML = "<p>This is the alternate content of the main section.</p>";
+        mainSection.className = "alternate-content";
+      };
+    </script>
+  </body>
+</html>
